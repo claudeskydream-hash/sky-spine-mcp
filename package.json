@@ -1,0 +1,37 @@
+{
+  "name": "sky-spine-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for automating Spine CLI export, texture packing, and asset validation workflows.",
+  "type": "module",
+  "bin": {
+    "sky-spine-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsx src/index.ts",
+    "prepare": "npm run build",
+    "start": "node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "test": "npm run typecheck"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "spine",
+    "spine2d",
+    "animation",
+    "texture-atlas"
+  ],
+  "author": "SkyDream",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.0",
+    "tsx": "^4.23.0",
+    "typescript": "^6.0.3"
+  }
+}
